@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<head>
+  <title>Surfing Bilingually</title>
+  <style>
+
+  @font-face {
+  font-family: 'IropkeBatangM';
+  src: url('font/IropkeBatangM.eot');
+  src: url('font/IropkeBatangM.eot?#iefix') format('embedded-opentype'),
+     url('font/IropkeBatangM.woff') format('woff');
+}
+
+  .wrapper .content .en {
+    display: block;
+    font-family: 'IropkeBatangM';
+  }
+  .wrapper .content .kor {
+    display: none;
+    font-family: 'IropkeBatangM';
+  }
+  .multilingual {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .multilingual p span:hover {
+    color: blue;
+  }
+
+  .chart-container {
+    position: relative;
+    width: 50vw;
+  }
+  </style>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+<div class = "menu">
+  <div class = "menu-contents">
+    <a class = "menu-links" href = "#about-multilingualism">About Multilingualism</a>
+    <br>
+    <a class = "menu-links" href = "#about-persona-a">About Persona A</a>
+    <br>
+    <a class = "menu-links" href = "#chrome-history-overview">Chrome History Overview</a>
+  </div>
+</div>
+
+<div class = "multilingual">
+  <p>
+  <span class = "en-option">English</span>
+  <span>&nbsp;•&nbsp;</span>
+  <span class = "kor-option">한국어</span>
+  </p>
+</div>
+
+<div class = "wrapper">
+  <div class = "content">
+    <section class = "text-section" id = "about-multilingualism">
+      <h1 class="en">
+        <p>About Multilingualism</p>
+      </h1>
+      <h1 class="kor">
+        <p>이중언어에 대하여</p>
+      </h1>
+      <div class="en">
+        <p>In Multilingualism and biculturalism, James P. Soffietti says that being multilingual is a conflict between ways of life, beliefs, customs, value systems. He also claims that cases of perfect bilingual and biculturalism are extremely rare, if at all possible. In linguistics, code-switching occurs when a speaker alternates between two or more languages, or language varieties, in the context of a single conversation (i.e. dialect). In linguistics, a calque or loan translation is a word or phrase borrowed from another language by literal, word-for-word or root-for-root translation. Third culture kid (TCK) or third culture individual (TCI) are terms used to refer to children raised in a culture other than their parents’ for a significant part of their early development years. Internationalization is the design and development of a product, application or document content that enables easy localization for target audiences that vary in culture, region, or language.
+        </p>
+      </div>
+      <div class="kor">
+        <p>이중 언어와 이중 문화에서 제임스 P. 소피에티는 다국어 사용이 삶의 방식, 신념, 풍습, 가치 체계 사이의 갈등이라고 말합니다. 그는 또한 완벽한 이중 ​​언어 및 양성 문화의 사례가 가능하다면, 그 경우는 극히 드물다고 주장합니다. 언어학에서, 코드 전환은 화자가 하나의 대화 맥락에서 두 개 이상의 언어 또는 언어 다양성을 전환 할 때 발생합니다 (예를 들어, 방언). 언어학에서 캘크 또는 어구 번역은 다른 언어를 글귀대로, 단어에서 단어로 혹은 어원에서 어원으로 번역한 것을 빌린 단어 또는 구입니다. 제 3 문화 어린이 (TCK) 또는 제 3 문화 개인 (TCI)은 초기 발달 시간의 상당 부분을 부모 이외의 문화에서 자란 자녀를 가리키는 용어입니다. 국제화는 문화, 지역 또는 언어가 다른 대상 고객에게 쉽게 현지화 할 수있는 제품, 응용 프로그램 또는 문서 컨텐트의 디자인 및 개발입니다.</p>
+      </div>
+    </section>
+    <section class = "text-section" id = "about-persona-a">
+      <h1 class="en">
+        <p>About Persona A</p>
+      </h1>
+      <h1 class="kor">
+        <p>페르소나 A에 대하여</p>
+      </h1>
+      <div class="en">
+        <p>In Multilingualism and biculturalism, James P. Soffietti says that being multilingual is a conflict between ways of life, beliefs, customs, value systems. He also claims that cases of perfect bilingual and biculturalism are extremely rare, if at all possible. In linguistics, code-switching occurs when a speaker alternates between two or more languages, or language varieties, in the context of a single conversation (i.e. dialect). In linguistics, a calque or loan translation is a word or phrase borrowed from another language by literal, word-for-word or root-for-root translation. Third culture kid (TCK) or third culture individual (TCI) are terms used to refer to children raised in a culture other than their parents’ for a significant part of their early development years. Internationalization is the design and development of a product, application or document content that enables easy localization for target audiences that vary in culture, region, or language.
+        </p>
+      </div>
+      <div class="kor">
+        <p>이중 언어와 이중 문화에서 제임스 P. 소피에티는 다국어 사용이 삶의 방식, 신념, 풍습, 가치 체계 사이의 갈등이라고 말합니다. 그는 또한 완벽한 이중 ​​언어 및 양성 문화의 사례가 가능하다면, 그 경우는 극히 드물다고 주장합니다. 언어학에서, 코드 전환은 화자가 하나의 대화 맥락에서 두 개 이상의 언어 또는 언어 다양성을 전환 할 때 발생합니다 (예를 들어, 방언). 언어학에서 캘크 또는 어구 번역은 다른 언어를 글귀대로, 단어에서 단어로 혹은 어원에서 어원으로 번역한 것을 빌린 단어 또는 구입니다. 제 3 문화 어린이 (TCK) 또는 제 3 문화 개인 (TCI)은 초기 발달 시간의 상당 부분을 부모 이외의 문화에서 자란 자녀를 가리키는 용어입니다. 국제화는 문화, 지역 또는 언어가 다른 대상 고객에게 쉽게 현지화 할 수있는 제품, 응용 프로그램 또는 문서 컨텐트의 디자인 및 개발입니다.</p>
+      </div>
+    </section>
+    <section class = "text-section" id = "chrome-history-overview">
+      <h1 class="en">
+        <p>Chrome History Overview</p>
+      </h1>
+      <h1 class="kor">
+        <p>크롬 히스토리 개요</p>
+      </h1>
+      <div class="chart-container">
+        <canvas id="overview_pie"></canvas>
+      </div>
+      <div class="en">
+        <p>
+          Each numeric information are extracted in following ways:
+          <br>English: Eliminating all the titles with either Korean or Japanese letters, and the ones that has 0 length.
+          <br>Korean: Collecting any titles with Korean letters.
+          <br>Japanese: Collecting any titles with Japanese letters without Korean letters.
+          <br>None: Collecting all empty titles (these are all default page when I initiate Chrome browser.)
+        </p>
+      </div>
+      <div class="kor">
+        <p>
+          각 숫자 정보는 다음과 같은 방법으로 추출됩니다.
+          <br> 영어: 한글 또는 일본어 글자와 길이가 0 인 글자를 모두 제외.
+          <br> 한국어: 한국어 문자가 포함 된 모든 제목을 수집.
+          <br> 일본어: 일본어 문자는 있지만 한국어 문자는 없는 모든 제목을 수집.
+          <br> 없음: 모든 빈 제목 (크롬 브라우저를 시작했을 때의 기본페이지).
+        </p>
+      </div>
+      <div class="chart-container">
+        <canvas id="overview_pie2"></canvas>
+      </div>
+    </section>
+    </div>
+    </section>
+  </div>
+</div>
+
+<script>
+
+
+
+</script>
+
+</body>
+
+</html>
