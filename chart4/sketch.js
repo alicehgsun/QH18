@@ -26,8 +26,8 @@ function setup() {
   }
 
   lang = createSelect();
-  lang.option('all')
-  lang.option('kor');
+  lang.option('kor')
+  lang.option('reorder');
 
 }
 
@@ -39,7 +39,7 @@ function draw(){
   lang.position(80, 80);
   for (let i = 0; i < vehicles.length; i++) {
       var v = vehicles[i];
-if (lang.value() == "kor"){
+if (lang.value() == "reorder"){
       v.update();
       v.show1();
       v.behaviors1()
