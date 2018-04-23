@@ -31,7 +31,7 @@ function setup() {
 
 
 function draw(){
-  background(0);
+  background(color("#7C4DFF"));
   lang.position(60, 40);
   for (let i = 0; i < vehicles.length; i++) {
       var v = vehicles[i];

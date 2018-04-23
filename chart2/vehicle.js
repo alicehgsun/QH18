@@ -37,20 +37,30 @@ class Vehicle {
 
   show0() {
     fill(255)
+    noStroke();
     textSize(12);
     textAlign(CENTER);
     text(this.month_word, this.en.x, 540);
 
     fill(0,0,255)
     ellipse(this.en.x, this.en.y, this.en_size, this.en_size);
-    fill(0, 0, 150)
+    fill(100, 0, 255)
     text("EN | " + this.en_value, this.en.x, this.en.y - this.en_size);
 
     fill(255,0,0)
     ellipse(this.kor.x, this.kor.y, this.kor_size, this.kor_size);
-
-    fill(100, 0, 0)
+    fill(180, 0, 100)
     text("KOR | " + this.kor_value, this.kor.x, this.kor.y - this.kor_size);
+
+    if (mouseX >= this.en.x && mouseX <= this.en.x + this.en_size &&
+  mouseY >= this.en.y && mouseY <= this.en.y + this.en_size) {
+  fill(0, 0, 255)
+  text("EN | " + this.en_value, this.en.x, this.en.y - this.en_size);
+} else if (mouseX >= this.kor.x && mouseX <= this.kor.x + this.kor_size + 10 &&
+  mouseY >= this.kor.y && mouseY <= this.kor.y + this.kor_size + 10) {
+  fill(255, 0, 0)
+  text("KOR | " + this.kor_value, this.kor.x, this.kor.y - this.kor_size);
+  }
   }
 
   show1() {
@@ -65,7 +75,7 @@ class Vehicle {
     textSize(this.en_size*0.8);
     text(this.en_value, this.en.x, 200);
 
-    fill(50,0,0)
+    fill(color("#d24dff"))
     ellipse(this.kor.x, this.kor.y, this.kor_size, this.kor_size);
   }
 
@@ -75,7 +85,7 @@ class Vehicle {
     textAlign(CENTER);
     text(this.month_word, this.en.x, 540);
 
-    fill(0,0,50)
+    fill(color("#4d4dff"))
     ellipse(this.en.x, this.en.y, this.en_size, this.en_size);
 
     fill(255,0,0)

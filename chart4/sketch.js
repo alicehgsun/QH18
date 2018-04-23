@@ -34,7 +34,7 @@ function setup() {
 
 
 function draw(){
-  background(0);
+  background(color("#7C4DFF"));
   // var baseline = height - height/6;
   lang.position(80, 80);
   for (let i = 0; i < vehicles.length; i++) {

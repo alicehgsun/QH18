@@ -8,12 +8,11 @@ class Vehicle {
     this.en = createVector(month, this.en_freq);
     this.kor = createVector(month, this.kor_freq);
     this.month_word = month_word;
-    this.en_size = en/50;
-    this.kor_size = kor/50;
+    this.en_size = en / 50;
+    this.kor_size = kor / 50;
     this.target = createVector(month, this.en_freq);
     this.target2 = createVector(month, this.kor_freq);
-    this.center = createVector(month, 300);
-    ;
+    this.center = createVector(month, 300);;
 
     this.vel = createVector();
     this.vel.mult(0.1);
@@ -32,52 +31,64 @@ class Vehicle {
   }
 
   applyForce(f) {
-  this.acc.add(f);
-}
+    this.acc.add(f);
+  }
 
   show0() {
     fill(255)
+    noStroke();
     textAlign(CENTER);
-textSize(12);
-text(this.month_word, this.en.x, 540);
+    textSize(12);
+    text(this.month_word, this.en.x, 540);
 
-    fill(0,0,255)
+    fill(0, 0, 255)
     ellipse(this.en.x, this.en.y, this.en_size, this.en_size);
-    fill(255,0,0)
+    fill(255, 0, 0)
     ellipse(this.kor.x, this.kor.y, this.kor_size, this.kor_size);
-    fill(0, 0, 150)
-text("EN | " + this.en_value, this.en.x, this.en.y - this.en_size);
-fill(100, 0, 0)
-text("KOR | " + this.kor_value, this.kor.x, this.kor.y - this.kor_size);
+    fill(100, 0, 255)
+    text("EN | " + this.en_value, this.en.x, this.en.y - this.en_size);
+    fill(180, 0, 100)
+    text("KOR | " + this.kor_value, this.kor.x, this.kor.y - this.kor_size);
+
+    if (mouseX >= this.en.x && mouseX <= this.en.x + this.en_size &&
+      mouseY >= this.en.y && mouseY <= this.en.y + this.en_size) {
+      fill(0, 0, 255)
+      text("EN | " + this.en_value, this.en.x, this.en.y - this.en_size);
+    } else if (mouseX >= this.kor.x && mouseX <= this.kor.x + this.kor_size + 10 &&
+      mouseY >= this.kor.y && mouseY <= this.kor.y + this.kor_size + 10) {
+      fill(255, 0, 0)
+      text("KOR | " + this.kor_value, this.kor.x, this.kor.y - this.kor_size);
+    }
+
   }
 
   show1() {
     fill(255)
-textSize(12);
-text(this.month_word, this.en.x, 540);
+    textSize(12);
+    text(this.month_word, this.en.x, 540);
 
-    fill(0,0,255)
+    fill(0, 0, 255)
     ellipse(this.en.x, this.en.y, this.en_size, this.en_size);
     textAlign(CENTER);
     textSize(this.en_size);
     text(this.en_value, this.en.x, 200);
 
-    fill(50,0,0)
+    fill(color("#d24dff"))
     ellipse(this.kor.x, this.kor.y, this.kor_size, this.kor_size);
   }
 
   show2() {
     fill(255)
-textSize(12);
-text(this.month_word, this.en.x, 540);
+    textSize(12);
+    text(this.month_word, this.en.x, 540);
 
-    fill(0,0,50)
+    fill(color("#4d4dff"))
     ellipse(this.en.x, this.en.y, this.en_size, this.en_size);
 
-    fill(255,0,0)
+    fill(255, 0, 0)
     ellipse(this.kor.x, this.kor.y, this.kor_size, this.kor_size);
     textAlign(CENTER);
-    textSize(this.kor_size*2);
+    textSize(this.kor_size * 2);
     text(this.kor_value, this.kor.x, 200)
   }
 
@@ -100,43 +111,43 @@ text(this.month_word, this.en.x, 540);
   }
 
   arrive0(target) {
-  let desired = p5.Vector.sub(this.target, this.en);
-  var d = desired.mag();
-  let speed = this.maxspeed;
-  if (d < 120) {
-    speed = map(d, 0, 120, 0, this.maxspeed);
+    let desired = p5.Vector.sub(this.target, this.en);
+    var d = desired.mag();
+    let speed = this.maxspeed;
+    if (d < 120) {
+      speed = map(d, 0, 120, 0, this.maxspeed);
+    }
+    desired.setMag(speed);
+    let steer = p5.Vector.sub(desired, this.vel);
+    steer.limit(this.maxforce);
+    return steer;
   }
-  desired.setMag(speed);
-  let steer = p5.Vector.sub(desired, this.vel);
-  steer.limit(this.maxforce);
-  return steer;
-}
 
 
   arrive(target) {
-  let desired = p5.Vector.sub(this.center, this.en);
-  var d = desired.mag();
-  let speed = this.maxspeed;
-  if (d < 120) {
-    speed = map(d, 0, 120, 0, this.maxspeed);
+    let desired = p5.Vector.sub(this.center, this.en);
+    var d = desired.mag();
+    let speed = this.maxspeed;
+    if (d < 120) {
+      speed = map(d, 0, 120, 0, this.maxspeed);
+    }
+    desired.setMag(speed);
+    let steer = p5.Vector.sub(desired, this.vel);
+    steer.limit(this.maxforce);
+    return steer;
   }
-  desired.setMag(speed);
-  let steer = p5.Vector.sub(desired, this.vel);
-  steer.limit(this.maxforce);
-  return steer;
-}
 
   arrive2(target) {
-  let desired = p5.Vector.sub(this.center, this.kor);
-  var d = desired.mag();
-  let speed = this.maxspeed;
-  if (d < 120) {
-    speed = map(d, 0, 120, 0, this.maxspeed);
-  }
-  desired.setMag(speed);
-  let steer = p5.Vector.sub(desired, this.vel);
-  steer.limit(this.maxforce);
-  return steer;
+    let desired = p5.Vector.sub(this.center, this.kor);
+    var d = desired.mag();
+    let speed = this.maxspeed;
+    if (d < 120) {
+      speed = map(d, 0, 120, 0, this.maxspeed);
+    }
+    desired.setMag(speed);
+    let steer = p5.Vector.sub(desired, this.vel);
+    steer.limit(this.maxforce);
+    return steer;
   }
 
 }

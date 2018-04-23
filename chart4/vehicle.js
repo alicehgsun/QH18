@@ -17,9 +17,9 @@ class Vehicle {
       this.g = 0;
       this.b = 255;
     } else {
-      this.r = 100;
-      this.g = 100;
-      this.b = 100;
+      this.r = 160;
+      this.g = 160;
+      this.b = 160;
     }
     this.percentage = round(percentage)
     ;
@@ -47,7 +47,7 @@ class Vehicle {
     stroke(255,0,0)
     ellipse(600, 300, 560, 560);
 
-    fill(this.r/2, this.g/2, this.b/2)
+    fill(this.r, this.g, this.b)
     ellipse(this.kor.x, this.kor.y, this.kor_size, this.kor_size);
 
     noStroke()
@@ -61,11 +61,11 @@ class Vehicle {
 
   show1() {
     noFill()
-    stroke(50,0,0)
+    stroke(color("#a280ff"))
     ellipse(600, 300, 560, 560);
 
     noStroke()
-    fill(50,0,0)
+    fill(color("#a280ff"))
     textAlign(CENTER);
     textSize(20);
     text("Services | KOR", width/2, height/1.3);
