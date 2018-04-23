@@ -1,0 +1,355 @@
+
+@font-face {
+font-family: 'IropkeBatangM';
+src: url('font/IropkeBatangM.eot');
+src: url('font/IropkeBatangM.eot?#iefix') format('embedded-opentype'),
+   url('font/IropkeBatangM.woff') format('woff');
+}
+
+.wrapper .content table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  margin-bottom: 3rem
+}
+
+.wrapper .content table tr {
+  text-align: left
+}
+
+.wrapper .content .two table tr td, .wrapper .content .two table tr th {
+  width: 50%;
+}
+
+.wrapper .content table tr td, .wrapper .content table tr th {
+  width: 33%;
+  font-family: 'IropkeBatangM';
+  font-weight: normal;
+  text-align: left !important;
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  border-bottom: solid 1px white
+}
+
+html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased
+}
+
+html, body {
+  font-size: 14px;
+  font-family: 'IropkeBatangM';
+  font-weight: regular
+}
+
+@media only screen and (max-width:768px) {
+  html, body {
+    font-size: 13px
+  }
+}
+
+html {
+  background-color: #7C4DFF
+}
+
+.menu {
+  display: block;
+  position: fixed;
+  z-index: 0;
+  padding-top: 5rem;
+  padding-left: 1.5rem;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: 'IropkeBatangM';
+}
+
+.menu .menu-contents {
+  display: inline-block;
+  position: relative;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem
+}
+
+.menu .menu-contents a.menu-links {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-family: 'IropkeBatangM';
+  font-size: 3rem
+}
+
+.menu .menu-contents a.menu-links:hover {
+  color: #000000
+}
+
+@media only screen and (max-width:767px) {
+  .menu .menu-contents {
+    padding-left: .5rem
+  }
+  .menu .menu-contents a.menu-links {
+    font-size: 2rem;
+    line-height: 3rem
+  }
+}
+
+
+
+.background {
+  position: fixed;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #7C4DFF
+}
+
+.background .bottom, .background .top {
+  position: fixed;
+  pointer-events: none;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-repeat: no-repeat;
+  background-position: center
+}
+
+
+.menu-icon {
+  display: block;
+  position: fixed;
+  z-index: 200000;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  user-select: none;
+  font-family: 'IropkeBatangM';
+  font-size: 3rem;
+}
+
+.menu-icon p {
+  color: black
+}
+
+.menu-icon .menu-statement {
+  display: block;
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem
+}
+
+
+.menu-icon .menu-statement p:hover {
+  color: white;
+}
+
+@media only screen and (max-width:767px) {
+  .menu-icon .menu-statement {
+    top: 1rem;
+    left: 1rem
+  }
+}
+
+.multilingual {
+  display: block;
+  position: fixed;
+  z-index: 200000;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  font-family: 'IropkeBatangM';
+  font-size: 1.5rem;
+  color: black
+}
+
+.multilingual p {
+  color: black
+}
+
+.multilingual p span:hover {
+  color: white
+}
+
+.wrapper {
+  display: block;
+  position: fixed;
+  z-index: 10000;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -overflow-scrolling: touch
+}
+
+.wrapper .content {
+  display: block;
+  position: relative;
+  width: 90vw;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding-bottom: 40vh;
+}
+
+.wrapper .content img {
+  width: 100%;
+  padding: 0px;
+  margin: 0px
+}
+
+.wrapper .content figure {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 3rem
+}
+
+.wrapper .content figure img {
+  width: 100%;
+  padding: 0px;
+  margin: 0px
+}
+
+.wrapper .content h1 {
+  font-family: 'IropkeBatangM';
+  font-size: 3rem;
+  line-height: 3.5rem;
+  letter-spacing: .1rem;
+  font-weight: normal;
+  margin-top: 9rem;
+  margin-bottom: 3rem;
+}
+
+.wrapper .content .en a {
+  color: black
+}
+
+.wrapper .content .en a:hover {
+  color: white
+}
+
+.wrapper .content .en h1, .wrapper .content .en h2, .wrapper .content .en h3, .wrapper .content .en h4, .wrapper .content .en h5, .wrapper .content .en h6 {
+  font-family: 'IropkeBatangM';
+  font-size: 2rem;
+  font-weight: normal;
+  margin-top: 3rem;
+  margin-bottom: 0rem
+}
+
+.wrapper .content .en p {
+  font-family: 'IropkeBatangM';
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-weight: normal;
+  margin-bottom: 3rem
+}
+
+.wrapper .content . table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse
+}
+
+.wrapper .content . table tr {
+  text-align: left
+}
+
+.wrapper .content .en table tr td, .wrapper .content . table tr th {
+  width: 50%;
+  font-family: 'IropkeBatangM';
+  font-weight: normal;
+  text-align: left !important;
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  border-bottom: solid 1px white
+}
+
+.wrapper .content ul {
+  list-style: none;
+  margin-bottom: 3rem
+}
+
+.wrapper .content ul li {
+  font-family: 'IropkeBatangM';
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-weight: normal
+}
+
+.wrapper .content ul li:before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  margin-right: .5rem;
+  border-radius: .5rem;
+  background-color: white
+}
+
+
+.wrapper .content .kor a {
+  color: black
+}
+
+.wrapper .content .kor a:hover {
+  color: white
+}
+
+.wrapper .content .kor h1, .wrapper .content .kor h2, .wrapper .content .kor h3, .wrapper .content .kor h4, .wrapper .content .kor h5, .wrapper .content .kor h6 {
+  font-family: 'IropkeBatangM';
+  font-size: 2rem;
+  font-weight: normal;
+  margin-top: 3rem;
+  margin-bottom: 0rem
+}
+
+.wrapper .content .kor p {
+  font-family: 'IropkeBatangM';
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-weight: normal;
+  margin-bottom: 3rem
+}
+
+.wrapper .content .en {
+  display: block
+}
+
+.wrapper .content .kor {
+  display: none;
+}
+
+.wrapper .content .logos a {
+  text-decoration: none;
+  color: transparent
+}
+
+.wrapper .content .logos img, .wrapper .content .logos figure {
+  width: 10rem;
+  vertical-align: middle;
+  margin-right: 6rem
+}
+
+.wrapper .content .chart-container{
+  margin-left: -18rem;
+  margin-bottom: 3rem;
+}
+
+.wrapper .content .chart-container iframe{
+  border: solid 1px #ffffff;
+}
