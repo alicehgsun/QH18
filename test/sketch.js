@@ -33,6 +33,8 @@ function setup() {
 
 function draw(){
   background(0);
+  // var baseline = height - height/6;
+  lang.position(80, 80);
   for (let i = 0; i < vehicles.length; i++) {
       var v = vehicles[i];
 if (lang.value() == "en"){
