@@ -1,8 +1,8 @@
 class Vehicle {
 
   constructor(month, month_word, en, kor) {
-    this.en_freq = map(en, 0, 6000, 400, 0)
-    this.kor_freq = map(kor, 0, 6000, 400, 0)
+    this.en_freq = map(en, 0, 7000, 450, 0)
+    this.kor_freq = map(kor, 0, 7000, 450, 0)
     this.kor_value = kor;
     this.en_value = en;
     this.en = createVector(month, this.en_freq);
@@ -50,7 +50,7 @@ class Vehicle {
     ellipse(this.kor.x, this.kor.y, this.kor_size, this.kor_size);
 
     fill(100, 0, 0)
-text("KOR | " + this.kor_value, this.kor.x, this.kor.y - this.kor_size);
+    text("KOR | " + this.kor_value, this.kor.x, this.kor.y - this.kor_size);
   }
 
   show1() {
@@ -62,7 +62,7 @@ text("KOR | " + this.kor_value, this.kor.x, this.kor.y - this.kor_size);
     fill(0,0,255)
     ellipse(this.en.x, this.en.y, this.en_size, this.en_size);
     textAlign(CENTER);
-    textSize(this.en_size);
+    textSize(this.en_size*0.8);
     text(this.en_value, this.en.x, 200);
 
     fill(50,0,0)

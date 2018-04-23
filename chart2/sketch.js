@@ -16,7 +16,7 @@ function setup() {
     var en = months.data[i].en
     var kor = months.data[i].kor
     vehicles.push(new Vehicle(
-      month * (width / 5.2),
+      month * (width / 4),
       months.data[i].month_word.toString(),
       en,
       kor));
@@ -34,7 +34,7 @@ function setup() {
 function draw(){
   background(0);
   // var baseline = height - height/6;
-  lang.position(0, 40);
+  lang.position(60, 40);
   for (let i = 0; i < vehicles.length; i++) {
       var v = vehicles[i];
 if (lang.value() == "en"){

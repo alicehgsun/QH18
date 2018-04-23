@@ -5,23 +5,12 @@ html, body {
 
 select{
   border: none;
-  font-weight:bold;
-  font-size: 9px;
-  color: #555;
-  /*border-bottom: 1px solid #000;*/
   box-shadow: none;
-  background: #ddd;
-  /*-webkit-appearance: none;
-  -webkit-border-radius: 0px;*/
-  /*border: 0;*/
-  outline: 0px solid #555;
+  height:  20px;
+  width: 80px;
+  font-size: 12px;
+  color: white;
+  background: white;
+  outline: 0px solid white;
   background-color: transparent;
-  height: 30px;
-  width: 120px;
-}
-
-select:option{
-  background-color: white;
-  border: none;
-  
 }
