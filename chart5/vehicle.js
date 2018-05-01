@@ -134,10 +134,10 @@ class Vehicle {
     ellipse((width / 4) * 3, 300, 560, 560);
 
     noStroke()
-    if (mouseX >= this.en_vec.x && mouseX <= this.en_vec.x + 30 &&
-      mouseY >= this.en_vec.y && mouseY <= this.en_vec.y + 30 ||
-      mouseX >= this.kor_vec.x && mouseX <= this.kor_vec.x + 30 &&
-      mouseY >= this.kor_vec.y && mouseY <= this.kor_vec.y + 30) {
+    if (mouseX >= width / 4 - 180 * sin(this.number * 19) && mouseX <= width / 4 - 180 * sin(this.number * 19) + 30 &&
+      mouseY >= height / 2 - 180 * cos(this.number * 19) && mouseY <= height / 2 - 180 * cos(this.number * 19) + 30 ||
+      mouseX >= (width / 4) * 3 - 180 * sin(this.number * 19) && mouseX <= (width / 4) * 3 - 180 * sin(this.number * 19) + 30 &&
+      mouseY >= height / 2 - 180 * cos(this.number * 19) && mouseY <= height / 2 - 180 * cos(this.number * 19) + 30) {
         noFill()
         stroke(255)
         line(this.kor_vec.x-50, this.kor_vec.y, this.en_vec.x+50, this.en_vec.y)
@@ -169,6 +169,7 @@ class Vehicle {
       textSize(12);
       text(this.en, this.en_vec.x, this.en_vec.y);
       text(this.kor, this.kor_vec.x, this.kor_vec.y);
+      fill(255)
       text(this.number, width / 4 - 180 * sin(this.number * 19), height / 2 - 180 * cos(this.number * 19));
       text(this.number, (width / 4) * 3 - 180 * sin(this.number * 19), height / 2 - 180 * cos(this.number * 19));
     }
