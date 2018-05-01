@@ -47,18 +47,18 @@ class Vehicle {
     fill(255, 0, 0)
     ellipse(this.kor.x, this.kor.y, this.kor_size, this.kor_size);
 
-    fill(100, 0, 255)
+    fill(0, 0, 255)
     text("EN | " + this.en_value, this.en.x, this.en.y - this.en_size);
-    fill(180, 0, 100)
+    fill(255, 0, 0)
     text("KOR | " + this.kor_value, this.kor.x, this.kor.y - this.kor_size);
 
     if (mouseX >= this.en.x && mouseX <= this.en.x + this.en_size &&
       mouseY >= this.en.y && mouseY <= this.en.y + this.en_size) {
-      fill(0, 0, 255)
+      fill(255)
       text("EN | " + this.en_value, this.en.x, this.en.y - this.en_size);
     } else if (mouseX >= this.kor.x && mouseX <= this.kor.x + this.kor_size + 10 &&
       mouseY >= this.kor.y && mouseY <= this.kor.y + this.kor_size + 10) {
-      fill(255, 0, 0)
+      fill(255)
       text("KOR | " + this.kor_value, this.kor.x, this.kor.y - this.kor_size);
       }
   }
