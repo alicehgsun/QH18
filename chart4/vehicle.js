@@ -43,16 +43,12 @@ class Vehicle {
 }
 
   show0() {
-    noFill()
-    stroke(255,0,0)
-    ellipse(600, 300, 560, 560);
-
+    strokeWeight(1.5);
     fill(this.r, this.g, this.b)
     ellipse(this.kor.x, this.kor.y, this.kor_size, this.kor_size);
-
     noStroke()
     fill(255)
-    textAlign(CENTER);
+    textAlign(CENTER,CENTER);
     textSize(20);
     text("Services | KOR", width/2, height/2);
     textSize(12);
@@ -60,24 +56,24 @@ class Vehicle {
   }
 
   show1() {
-    noFill()
-    stroke(color("#a280ff"))
-    ellipse(600, 300, 560, 560);
-
     noStroke()
     fill(color("#a280ff"))
-    textAlign(CENTER);
+    textAlign(CENTER,CENTER);
     textSize(20);
     text("Services | KOR", width/2, height/1.3);
 
-    noFill()
+    strokeWeight(1.5);
     stroke(this.r, this.g, this.b)
+    noFill();
     ellipse(width/2-this.number*130+500, this.kor.y, this.kor_size, this.kor_size);
     textAlign(CENTER);
     noStroke()
     fill(255)
+    var mapped = map(this.kor_size, 0, 120, 10, 25 )
+    textSize(mapped);
+    text(this.x_word, width/2-this.number*130+500, 200);
     textSize(12);
-    text(this.x_word +"\n"+ this.percentage + "%", width/2-this.number*130+500, 400);
+    text(this.percentage + "%", width/2-this.number*130+500, 400);
   }
 
 

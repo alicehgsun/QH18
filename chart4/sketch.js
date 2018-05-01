@@ -40,13 +40,19 @@ function draw(){
   for (let i = 0; i < vehicles.length; i++) {
       var v = vehicles[i];
 if (lang.value() == "reorder"){
+  noFill()
+  stroke(color("#a280ff"))
+  ellipse(600, 300, 560, 560);
       v.update();
       v.show1();
       v.behaviors1()
     } else{
-      v.update();
-      v.show0()
-      v.behaviors0()
+      noFill()
+      stroke(255,0,0)
+      ellipse(600, 300, 560, 560);
+        v.update();
+        v.show0()
+        v.behaviors0()
     }
 }
 }
