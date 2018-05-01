@@ -82,7 +82,7 @@ class Vehicle {
   show0() {
     noStroke()
     fill(255)
-    textAlign(CENTER);
+    textAlign(CENTER, CENTER);
     textSize(20);
     text("Keywords | EN", width / 4, height / 2);
     text("Keywords | KOR", (width / 4) * 3, height / 2);
@@ -103,7 +103,7 @@ class Vehicle {
       ellipse(this.kor_vec.x, this.kor_vec.y, this.kor_size, this.kor_size);
       fill(255, 255, 255);
       textAlign(CENTER, CENTER);
-      textSize(14);
+      textSize(16);
       text(this.en + " | " + this.en_visit, this.en_vec.x, this.en_vec.y);
       text(this.kor + " | " + this.kor_visit, this.kor_vec.x, this.kor_vec.y);
     } else {
@@ -120,18 +120,6 @@ class Vehicle {
   }
 
   show1() {
-    noStroke()
-    fill(255)
-    textAlign(CENTER);
-    textSize(20);
-    text("Keywords | EN", width / 4, height / 2);
-    text("Keywords | KOR", (width / 4) * 3, height / 2);
-
-    noFill();
-    stroke(0, 0, 255);
-    ellipse(width / 4, 300, 560, 560);
-    stroke(255, 0, 0);
-    ellipse((width / 4) * 3, 300, 560, 560);
 
     noStroke()
     if (mouseX >= width / 4 - 180 * sin(this.number * 19) && mouseX <= width / 4 - 180 * sin(this.number * 19) + 30 &&
@@ -149,7 +137,7 @@ class Vehicle {
         noStroke()
         fill(255);
         textAlign(CENTER, CENTER);
-        textSize(14);
+        textSize(16);
         text(this.en + " | " + this.en_visit, this.en_vec.x, this.en_vec.y);
         text(this.kor + " | " + this.kor_visit, this.kor_vec.x, this.kor_vec.y);
         fill(0,0,255)
