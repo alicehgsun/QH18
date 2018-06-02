@@ -22,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  background(color("#7c4dff"))
+  background(color("#ac89ff"))
   lang.position(80, 80);
   for (let i = 0; i < vehicles.length; i++) {
       var v = vehicles[i];
