@@ -32,7 +32,7 @@ function setup() {
 
 
 function draw(){
-  background(color("#7C4DFF"));
+  background(color("#ac89ff"));
   lang.position(60, 40);
   for (let i = 0; i < vehicles.length; i++) {
       var v = vehicles[i];
