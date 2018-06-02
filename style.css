@@ -21,6 +21,10 @@ src: url('font/IropkeBatangM.eot?#iefix') format('embedded-opentype'),
   width: 50%;
 }
 
+.wrapper .content .four table tr td, .wrapper .content .four table tr th {
+  width: 25%;
+}
+
 .wrapper .content table tr td, .wrapper .content table tr th {
   width: 33%;
   font-family: 'IropkeBatangM';
@@ -53,7 +57,7 @@ html, body {
 }
 
 html {
-  background-color: #7C4DFF
+  background-color: #ac89ff;
 }
 
 .menu {
