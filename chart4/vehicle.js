@@ -57,7 +57,7 @@ class Vehicle {
 
   show1() {
     noStroke()
-    fill(color("#ac89ff"))
+    fill(color("#a280ff"))
     textAlign(CENTER,CENTER);
     textSize(20);
     text("Services | KOR", width/2, height/1.3);
