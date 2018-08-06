@@ -9,17 +9,17 @@ class Vehicle {
     this.kor_size = kor/7;
     this.center = createVector(width/2 - 200*sin(number*4), 300);
     if (country == "korea"){
-      this.r = 255;
-      this.g = 0;
-      this.b = 0;
-    } else if (country == "us"){
       this.r = 0;
-      this.g = 0;
+      this.g = 255;
       this.b = 255;
+    } else if (country == "us"){
+      this.r = 255;
+      this.g = 255;
+      this.b = 0;
     } else {
-      this.r = 160;
-      this.g = 160;
-      this.b = 160;
+      this.r = 180;
+      this.g = 180;
+      this.b = 180;
     }
     this.percentage = round(percentage)
     ;
@@ -43,16 +43,22 @@ class Vehicle {
 }
 
   show0() {
-    strokeWeight(1.5);
-    fill(this.r, this.g, this.b)
-    ellipse(this.kor.x, this.kor.y, this.kor_size, this.kor_size);
     noStroke()
-    fill(255)
+    fill(color("#a280ff"))
     textAlign(CENTER,CENTER);
     textSize(20);
     text("Services | KOR", width/2, height/2);
+
+    strokeWeight(1.5);
+    fill(this.r, this.g, this.b)
+    ellipse(this.kor.x, this.kor.y, this.kor_size, this.kor_size);
+    push();
+    noStroke();
+    fill(0);
+    textAlign(CENTER,CENTER);
     textSize(12);
     text(this.x_word, this.kor.x, this.kor.y);
+    pop();
   }
 
   show1() {

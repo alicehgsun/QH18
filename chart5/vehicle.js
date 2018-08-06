@@ -80,38 +80,33 @@ class Vehicle {
   }
 
   show0() {
-    noStroke()
-    fill(255)
-    textAlign(CENTER, CENTER);
-    textSize(20);
-    text("Keywords | EN", width / 4, height / 2);
-    text("Keywords | KOR", (width / 4) * 3, height / 2);
-
-    noFill();
-    stroke(0, 0, 255);
-    ellipse(width / 4, 300, 560, 560);
-    stroke(255, 0, 0);
-    ellipse((width / 4) * 3, 300, 560, 560);
+    // noStroke()
+    // fill(255)
+    // textAlign(CENTER, CENTER);
+    // textSize(20);
+    // text("Keywords | EN", width / 4, height / 2);
+    // text("Keywords | KOR", (width / 4) * 3, height / 2);
 
     noStroke()
     if (mouseX >= this.en_vec.x && mouseX <= this.en_vec.x + 30 &&
       mouseY >= this.en_vec.y && mouseY <= this.en_vec.y + 30 ||
       mouseX >= this.kor_vec.x && mouseX <= this.kor_vec.x + 30 &&
       mouseY >= this.kor_vec.y && mouseY <= this.kor_vec.y + 30) {
-      fill(255, 0, 255);
+      fill(255, 255, 0);
       ellipse(this.en_vec.x, this.en_vec.y, this.en_size, this.en_size);
+      fill(0, 255, 255);
       ellipse(this.kor_vec.x, this.kor_vec.y, this.kor_size, this.kor_size);
-      fill(255, 255, 255);
+      fill(0);
       textAlign(CENTER, CENTER);
       textSize(16);
       text(this.en + " | " + this.en_visit, this.en_vec.x, this.en_vec.y);
       text(this.kor + " | " + this.kor_visit, this.kor_vec.x, this.kor_vec.y);
     } else {
-      fill('rgba(0,0,255, 0.5)');
+      fill('rgba(255,255,0, 0.5)');
       ellipse(this.en_vec.x, this.en_vec.y, this.en_size, this.en_size);
-      fill('rgba(255,0,0, 0.5)');
+      fill('rgba(0,255,255, 0.5)');
       ellipse(this.kor_vec.x, this.kor_vec.y, this.kor_size, this.kor_size);
-      fill(255, 255, 255);
+      fill(255);
       textAlign(CENTER, CENTER);
       textSize(12);
       text(this.en, this.en_vec.x, this.en_vec.y);
@@ -121,38 +116,39 @@ class Vehicle {
 
   show1() {
 
-    noStroke()
     if (mouseX >= width / 4 - 180 * sin(this.number * 19) && mouseX <= width / 4 - 180 * sin(this.number * 19) + 30 &&
       mouseY >= height / 2 - 180 * cos(this.number * 19) && mouseY <= height / 2 - 180 * cos(this.number * 19) + 30 ||
       mouseX >= (width / 4) * 3 - 180 * sin(this.number * 19) && mouseX <= (width / 4) * 3 - 180 * sin(this.number * 19) + 30 &&
       mouseY >= height / 2 - 180 * cos(this.number * 19) && mouseY <= height / 2 - 180 * cos(this.number * 19) + 30) {
-        noFill()
-        stroke(255)
-        line(this.kor_vec.x-50, this.kor_vec.y, this.en_vec.x+50, this.en_vec.y)
-        stroke('rgba(255,0,0, 0.5)');
-        ellipse(this.kor_vec.x, this.kor_vec.y, this.kor_size, this.kor_size);
-        stroke('rgba(0,0,255, 0.5)');
-        ellipse(this.en_vec.x, this.en_vec.y, this.en_size, this.en_size);
-
-        noStroke()
-        fill(255);
-        textAlign(CENTER, CENTER);
-        textSize(16);
-        text(this.en + " | " + this.en_visit, this.en_vec.x, this.en_vec.y);
-        text(this.kor + " | " + this.kor_visit, this.kor_vec.x, this.kor_vec.y);
-        fill(0,0,255)
-        text(this.number, width / 4 - 180 * sin(this.number * 19), height / 2 - 180 * cos(this.number * 19));
-        fill(255,0,0)
-        text(this.number, (width / 4) * 3 - 180 * sin(this.number * 19), height / 2 - 180 * cos(this.number * 19));
-    } else {
-      noFill()
-      stroke('rgba(255,0,0, 0.5)');
+      stroke(255)
+      line(this.kor_vec.x - 50, this.kor_vec.y, this.en_vec.x + 50, this.en_vec.y)
+      noStroke()
+      line(this.kor_vec.x - 50, this.kor_vec.y, this.en_vec.x + 50, this.en_vec.y)
+      fill(0, 255, 255);
       ellipse(this.kor_vec.x, this.kor_vec.y, this.kor_size, this.kor_size);
-      stroke('rgba(0,0,255, 0.5)');
+      fill(255, 255, 0);
       ellipse(this.en_vec.x, this.en_vec.y, this.en_size, this.en_size);
 
       noStroke()
-      fill('rgba(255,255,255, 0.5)');
+      textAlign(CENTER, CENTER);
+      textSize(16);
+      fill(0);
+      text(this.en + " | " + this.en_visit, this.en_vec.x, this.en_vec.y);
+      text(this.kor + " | " + this.kor_visit, this.kor_vec.x, this.kor_vec.y);
+      fill(255, 255, 0)
+      text(this.number, width / 4 - 180 * sin(this.number * 19), height / 2 - 180 * cos(this.number * 19));
+      fill(0, 255, 255)
+      text(this.number, (width / 4) * 3 - 180 * sin(this.number * 19), height / 2 - 180 * cos(this.number * 19));
+
+    } else {
+      noStroke()
+      fill('rgba(0,255,255, 0.5)');
+      ellipse(this.kor_vec.x, this.kor_vec.y, this.kor_size, this.kor_size);
+      fill('rgba(255,255,0, 0.5)');
+      ellipse(this.en_vec.x, this.en_vec.y, this.en_size, this.en_size);
+
+      noStroke()
+      fill(255);
       textAlign(CENTER, CENTER);
       textSize(12);
       text(this.en, this.en_vec.x, this.en_vec.y);
