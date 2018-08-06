@@ -1,9 +1,6 @@
-
 @font-face {
-font-family: 'IropkeBatangM';
-src: url('font/IropkeBatangM.eot');
-src: url('font/IropkeBatangM.eot?#iefix') format('embedded-opentype'),
-   url('font/IropkeBatangM.woff') format('woff');
+font-family: 'NotoSerif';
+src: url('font/NotoSerifCJKkr-Medium.otf');
 }
 
 .wrapper .content table {
@@ -27,7 +24,7 @@ src: url('font/IropkeBatangM.eot?#iefix') format('embedded-opentype'),
 
 .wrapper .content table tr td, .wrapper .content table tr th {
   width: 33%;
-  font-family: 'IropkeBatangM';
+  font-family: 'NotoSerif';
   font-weight: normal;
   text-align: left !important;
   font-size: 2rem;
@@ -46,7 +43,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li {
 
 html, body {
   font-size: 14px;
-  font-family: 'IropkeBatangM';
+  font-family: 'times';
   font-weight: regular
 }
 
@@ -72,7 +69,7 @@ html {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
-  font-family: 'IropkeBatangM';
+  font-family: 'NotoSerif';
 }
 
 .menu .menu-contents {
@@ -86,8 +83,8 @@ html {
   display: inline-block;
   color: white;
   text-decoration: none;
-  font-family: 'IropkeBatangM';
-  font-size: 3rem
+  font-family: 'NotoSerif';
+  font-size: 2rem
 }
 
 .menu .menu-contents a.menu-links:hover {
@@ -138,8 +135,8 @@ html {
   left: 0px;
   cursor: pointer;
   user-select: none;
-  font-family: 'IropkeBatangM';
-  font-size: 3rem;
+  font-family: 'NotoSerif';
+  font-size: 2rem;
 }
 
 .menu-icon p {
@@ -173,8 +170,8 @@ html {
   right: 1.5rem;
   cursor: pointer;
   user-select: none;
-  font-family: 'IropkeBatangM';
-  font-size: 1.5rem;
+  font-family: 'NotoSerif';
+  font-size: 2rem;
   color: black
 }
 
@@ -229,7 +226,7 @@ html {
 }
 
 .wrapper .content h1 {
-  font-family: 'IropkeBatangM';
+  font-family: 'NotoSerif';
   font-size: 3rem;
   line-height: 3.5rem;
   letter-spacing: .1rem;
@@ -247,7 +244,7 @@ html {
 }
 
 .wrapper .content .en h1, .wrapper .content .en h2, .wrapper .content .en h3, .wrapper .content .en h4, .wrapper .content .en h5, .wrapper .content .en h6 {
-  font-family: 'IropkeBatangM';
+  font-family: 'NotoSerif';
   font-size: 2rem;
   font-weight: normal;
   margin-top: 3rem;
@@ -255,7 +252,7 @@ html {
 }
 
 .wrapper .content .en p {
-  font-family: 'IropkeBatangM';
+  font-family: 'NotoSerif';
   font-size: 1.5rem;
   line-height: 2.25rem;
   font-weight: normal;
@@ -274,7 +271,7 @@ html {
 
 .wrapper .content .en table tr td, .wrapper .content . table tr th {
   width: 50%;
-  font-family: 'IropkeBatangM';
+  font-family: 'NotoSerif';
   font-weight: normal;
   text-align: left !important;
   font-size: 2rem;
@@ -288,7 +285,7 @@ html {
 }
 
 .wrapper .content ul li {
-  font-family: 'IropkeBatangM';
+  font-family: 'NotoSerif';
   font-size: 1.5rem;
   line-height: 2.25rem;
   font-weight: normal
@@ -315,7 +312,7 @@ html {
 }
 
 .wrapper .content .kor h1, .wrapper .content .kor h2, .wrapper .content .kor h3, .wrapper .content .kor h4, .wrapper .content .kor h5, .wrapper .content .kor h6 {
-  font-family: 'IropkeBatangM';
+  font-family: 'NotoSerif';
   font-size: 2rem;
   font-weight: normal;
   margin-top: 3rem;
@@ -323,7 +320,7 @@ html {
 }
 
 .wrapper .content .kor p {
-  font-family: 'IropkeBatangM';
+  font-family: 'NotoSerif';
   font-size: 1.5rem;
   line-height: 2.25rem;
   font-weight: normal;
@@ -356,4 +353,10 @@ html {
 
 .wrapper .content .chart-container iframe{
   border: solid 1px #ffffff;
+}
+
+.surfing-container{
+  /* text-align: center; */
+  margin-left: -14rem;
+  margin-bottom: 3rem;
 }
